@@ -1,34 +1,32 @@
 {
-  "name": "fishfinder",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "main": "src/index.js",
-  "dependencies": {
-    "bootstrap": "4.3.1",
-    "jquery": "3.4.0",
-    "popper.js": "1.15.0",
-    "react": "16.8.3",
-    "react-dom": "16.8.3",
-    "react-redux": "7.0.3",
-    "react-router-dom": "5.0.0",
-    "react-scripts": "2.1.8",
-    "redux": "4.0.1",
-    "redux-immutable-state-invariant": "2.1.0"
-  },
-  "devDependencies": {
-    "typescript": "3.3.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+    "name": "iflyguide",
+    "version": "1.0.0",
+    "description": "",
+    "keywords": [],
+    "main": "src/index.js",
+    "dependencies": {
+        "bootstrap": "4.3.1",
+        "jquery": "3.4.0",
+        "popper.js": "1.15.0",
+        "react": "16.8.3",
+        "react-dom": "16.8.3",
+        "react-redux": "7.0.3",
+        "react-router-dom": "5.0.0",
+        "react-scripts": "2.1.8",
+        "redux": "4.0.1",
+        "redux-immutable-state-invariant": "2.1.0"
+    },
+    "devDependencies": {
+        "typescript": "3.3.3"
+    },
+    "scripts": {
+        "start": "run-p start:dev start:api",
+        "start:api": "node tools/apiServer.js",
+        "start:dev": "react-scripts",
+        "prestart:api": "node tools/createMockDb.js",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
